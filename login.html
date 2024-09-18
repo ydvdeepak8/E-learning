@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styless.css">
+    <style>
+        /* Simple styles for demo purposes */
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Page</h2>
+        <form id="loginForm" action="login.php" method="post">
+            <div id="emailSection">
+                <input type="text" id="name" name="name" placeholder="Enter your name" required> <!-- Name input field -->
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <input type="hidden" name="login_method" value="email">
+                <input type="button" id="actionButton" value="Next" onclick="handleNextButton()">
+            </div>
+            <div id="otpSection" class="hidden">
+                <input type="text" id="otp" name="otp" placeholder="Enter OTP" required>
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        
+
+        <hr>
+
+        <div id="socialLogin" class="social-login">
+            <button id="googleLogin" onclick="loginWithGoogle()">Login with Google</button>
+            <button id="githubLogin" onclick="loginWithGithub()">Login with GitHub</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

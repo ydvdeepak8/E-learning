@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Work</title>
+  <style>body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    height: 100vh;
+    margin-left: 220px; /* Adjust for the sidebar width and gap */
+}
+
+
+.sidebar {
+    width: 200px;
+    background-color: #2c3e50;
+    padding: 20px 30px; /* Increase right padding for a gap effect */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* To include padding in width */
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #34495e;
+}
+
+.quiz-container {
+    flex: 1;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    margin-top: 40px;
+    margin-left: 20px; /* Add a gap between the sidebar and quiz container */
+    overflow-y: auto;
+}
+
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.question {
+    background: #f2f2f2;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 15px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+</style>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            // Perform form validation or any other logic here
+
+            // Redirect to the new page
+            window.location.href = 'indexxx.html'; // Replace 'new-page.php' with the URL of the page you want to redirect to
+        }
+
+        window.onload = function() {
+            const form = document.querySelector('.quiz-container');
+            form.addEventListener('submit', handleFormSubmit);
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#question1">Question 1</a></li>
+                <li><a href="#question2">Question 2</a></li>
+                <li><a href="#question3">Question 3</a></li>
+                <li><a href="#question4">Question 4</a></li>
+                <li><a href="#question5">Question 5</a></li>
+                <li><a href="#question6">Question 6</a></li>
+                <li><a href="#question7">Question 7</a></li>
+                <li><a href="#question8">Question 8</a></li>
+                <li><a href="#question9">Question 9</a></li>
+                <li><a href="#question10">Question 10</a></li>
+                <!-- Add links for new questions here -->
+                <li><a href="#question11">Question 11</a></li>
+                <li><a href="#question12">Question 12</a></li>
+                <li><a href="#question13">Question 13</a></li>
+                <li><a href="#question14">Question 14</a></li>
+                <li><a href="#question15">Question 15</a></li>
+                <li><a href="#question16">Question 16</a></li>
+                <li><a href="#question17">Question 17</a></li>
+                <li><a href="#question18">Question 18</a></li>
+                <li><a href="#question19">Question 19</a></li>
+                <li><a href="#question20">Question 20</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <!-- Wrap the quiz in a form element -->
+            <form class="quiz-container">
+                <!-- MCQ Questions -->
+                <section id="question1" class="question">
+                    <h2>Question 1: What is a software development lifecycle (SDLC) model?</h2>
+                    <label>
+                        <input type="radio" name="sdlcModel" value="waterfall" required> Waterfall
+                    </label>
+                    <label>
+                        <input type="radio" name="sdlcModel" value="agile" required> Agile
+                    </label>
+                    <label>
+                        <input type="radio" name="sdlcModel" value="spiral" required> Spiral
+                    </label>
+                    <label>
+                        <input type="radio" name="sdlcModel" value="v-model" required> V-Model
+                    </label>
+                </section>
+
+                <section id="question2" class="question">
+                    <h2>Question 2: Which of the following is a key principle of Agile methodology?</h2>
+                    <label>
+                        <input type="radio" name="agilePrinciple" value="customerCollaboration" required> Customer collaboration over contract negotiation
+                    </label>
+                    <label>
+                        <input type="radio" name="agilePrinciple" value="followingPlan" required> Following a detailed plan over responding to change
+                    </label>
+                    <label>
+                        <input type="radio" name="agilePrinciple" value="comprehensiveDocumentation" required> Comprehensive documentation over working software
+                    </label>
+                </section>
+
+                <section id="question3" class="question">
+                    <h2>Question 3: What is the primary goal of continuous integration (CI) in software development?</h2>
+                    <label>
+                        <input type="radio" name="ciGoal" value="earlyBugDetection" required> Early detection of bugs
+                    </label>
+                    <label>
+                        <input type="radio" name="ciGoal" value="fasterDeployment" required> Faster deployment
+                    </label>
+                    <label>
+                        <input type="radio" name="ciGoal" value="codeOptimization" required> Code optimization
+                    </label>
+                    <label>
+                        <input type="radio" name="ciGoal" value="increasedDocumentation" required> Increased documentation
+                    </label>
+                </section>
+
+                <section id="question4" class="question">
+                    <h2>Question 4: What is the purpose of unit testing in software development?</h2>
+                    <label>
+                        <input type="radio" name="unitTesting" value="validateFunctionality" required> Validate functionality of individual units
+                    </label>
+                    <label>
+                        <input type="radio" name="unitTesting" value="integrationTesting" required> Test integration of different modules
+                    </label>
+                    <label>
+                        <input type="radio" name="unitTesting" value="systemTesting" required> Test the complete system
+                    </label>
+                    <label>
+                        <input type="radio" name="unitTesting" value="acceptanceTesting" required> Validate the system against requirements
+                    </label>
+                </section>
+
+                <section id="question5" class="question">
+                    <h2>Question 5: Which tool is commonly used for version control in software development?</h2>
+                    <label>
+                        <input type="radio" name="versionControl" value="git" required> Git
+                    </label>
+                    <label>
+                        <input type="radio" name="versionControl" value="svn" required> SVN
+                    </label>
+                    <label>
+                        <input type="radio" name="versionControl" value="mercurial" required> Mercurial
+                    </label>
+                    <label>
+                        <input type="radio" name="versionControl" value="perforce" required> Perforce
+                    </label>
+                </section>
+
+                <section id="question6" class="question">
+                    <h2>Question 6: What is the primary purpose of a database index?</h2>
+                    <label>
+                        <input type="radio" name="dbIndex" value="speedQuery" required> Speed up query performance
+                    </label>
+                    <label>
+                        <input type="radio" name="dbIndex" value="reduceStorage" required> Reduce storage requirements
+                    </label>
+                    <label>
+                        <input type="radio" name="dbIndex" value="backupData" required> Backup data
+                    </label>
+                    <label>
+                        <input type="radio" name="dbIndex" value="manageTransactions" required> Manage transactions
+                    </label>
+                </section>
+
+                <section id="question7" class="question">
+                    <h2>Question 7: Which of the following is an example of a NoSQL database?</h2>
+                    <label>
+                        <input type="radio" name="noSqlDB" value="mongodb" required> MongoDB
+                    </label>
+                    <label>
+                        <input type="radio" name="noSqlDB" value="mysql" required> MySQL
+                    </label>
+                    <label>
+                        <input type="radio" name="noSqlDB" value="postgresql" required> PostgreSQL
+                    </label>
+                    <label>
+                        <input type="radio" name="noSqlDB" value="sqlite" required> SQLite
+                    </label>
+                </section>
+
+                <section id="question8" class="question">
+                    <h2>Question 8: What does API stand for?</h2>
+                    <label>
+                        <input type="radio" name="api" value="applicationProgrammingInterface" required> Application Programming Interface
+                    </label>
+                    <label>
+                        <input type="radio" name="api" value="advancedProgrammingInterface" required> Advanced Programming Interface
+                    </label>
+                    <label>
+                        <input type="radio" name="api" value="automaticProgrammingInterface" required> Automatic Programming Interface
+                    </label>
+                    <label>
+                        <input type="radio" name="api" value="algorithmProgrammingInterface" required> Algorithm Programming Interface
+                    </label>
+                </section>
+
+                <section id="question9" class="question">
+                    <h2>Question 9: Which of the following is a key benefit of using cloud computing?</h2>
+                    <label>
+                        <input type="radio" name="cloudComputing" value="costEfficiency" required> Cost efficiency
+                    </label>
+                    <label>
+                        <input type="radio" name="cloudComputing" value="highMaintenance" required> High maintenance
+                    </label>
+                    <label>
+                        <input type="radio" name="cloudComputing" value="limitedScalability" required> Limited scalability
+                    </label>
+                    <label>
+                        <input type="radio" name="cloudComputing" value="fixedResources" required> Fixed resources
+                    </label>
+                </section>
+
+                <section id="question10" class="question">
+                    <h2>Question 10: What is the primary benefit of using a content delivery network (CDN)?</h2>
+                    <label>
+                        <input type="radio" name="cdn" value="fasterLoadTimes" required> Faster load times
+                    </label>
+                    <label>
+                        <input type="radio" name="cdn" value="increasedCost" required> Increased cost
+                    </label>
+                    <label>
+                        <input type="radio" name="cdn" value="lowerAvailability" required> Lower availability
+                    </label>
+                    <label>
+                        <input type="radio" name="cdn" value="higherLatency" required> Higher latency
+                    </label>
+                </section>
+
+                <!-- Text Field Questions -->
+                <section id="question11" class="question">
+                    <h2>Question 11: Explain the concept of a "design pattern" in software development.</h2>
+                    <textarea name="designPattern" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question12" class="question">
+                    <h2>Question 12: Describe the process of code refactoring.</h2>
+                    <textarea name="codeRefactoring" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question13" class="question">
+                    <h2>Question 13: What are the main differences between procedural and object-oriented programming?</h2>
+                    <textarea name="programmingParadigms" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question14" class="question">
+                    <h2>Question 14: How does version control improve team collaboration?</h2>
+                    <textarea name="versionControlBenefits" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question15" class="question">
+                    <h2>Question 15: Define the term "API" and provide an example of its use.</h2>
+                    <textarea name="apiDefinition" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question16" class="question">
+                    <h2>Question 16: What is the role of a software architect?</h2>
+                    <textarea name="softwareArchitectRole" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question17" class="question">
+                    <h2>Question 17: Describe the concept of "DevOps" and its benefits.</h2>
+                    <textarea name="devOps" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question18" class="question">
+                    <h2>Question 18: Explain the term "scalability" in the context of software systems.</h2>
+                    <textarea name="scalability" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question19" class="question">
+                    <h2>Question 19: How do microservices architecture differ from monolithic architecture?</h2>
+                    <textarea name="microservicesVsMonolithic" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <section id="question20" class="question">
+                    <h2>Question 20: What are the common types of software testing, and what do they aim to achieve?</h2>
+                    <textarea name="typesOfTesting" rows="4" cols="50" required placeholder="Write 'NA' if you don't know the answer."></textarea>
+                </section>
+
+                <!-- Submit button -->
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+    <script>
+        // Intercept form submission
+        document.getElementById('quiz-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+    
+            // Your logic to check quiz answers and display the result can go here (if needed)
+    
+            // Redirect to the desired page
+            window.location.href = 'indexxx.html'; // Replace with your desired link
+        };
+    </script>
+    
+    
+</body>
+</html>
