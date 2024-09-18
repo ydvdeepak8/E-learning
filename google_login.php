@@ -4,9 +4,9 @@ require_once 'vendor/autoload.php';
 session_start();
 
 $client = new Google_Client();
-$client->setClientId('631821749808-3t05lboh8g4i7gbvn6tkq255g3o0po3l.apps.googleusercontent.com');
-$client->setClientSecret('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');
-$client->setRedirectUri('http://localhost/E-learning/google_callback.php');
+$client->setClientId(getenv('GOOGLE_CLIENT_ID')); // Use environment variable
+$client->setClientSecret(getenv('GOOGLE_CLIENT_SECRET')); // Use environment variable
+$client->setRedirectUri(getenv('REDIRECT_URI')); // Use environment variable or set this manually for production
 $client->addScope('email');
 $client->addScope('profile');
 
