@@ -5,9 +5,9 @@ session_start();
 
 // Create and configure Google Client
 $client = new Google_Client();
-$client->setClientId('631821749808-3t05lboh8g4i7gbvn6tkq255g3o0po3l.apps.googleusercontent.com');
-$client->setClientSecret('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');
-$client->setRedirectUri('http://localhost/E-learning/google_callback.php');
+$client->setClientId(getenv('GOOGLE_CLIENT_ID')); // Use environment variable
+$client->setClientSecret(getenv('GOOGLE_CLIENT_SECRET')); // Use environment variable
+$client->setRedirectUri(getenv('REDIRECT_URI')); // Use environment variable or set this manually for production
 
 if (isset($_GET['code'])) {
     $client->fetchAccessTokenWithAuthCode($_GET['code']);
@@ -19,11 +19,11 @@ if (isset($_GET['code'])) {
     $name = $user_info->name;  // Get the user's name
     $login_method = 'google';  // Specify that the login method is Google
 
-    // Connect to the database
-    $servername = "localhost";
-    $username = "root";  // Default XAMPP MySQL username
-    $password = "";      // Default XAMPP MySQL password
-    $dbname = "tesst";
+    // Database configuration using environment variables
+    $servername = getenv('DB_HOST'); // Use environment variable
+    $username = getenv('DB_USER'); // Use environment variable
+    $password = getenv('DB_PASS'); // Use environment variable
+    $dbname = getenv('DB_NAME'); // Use environment variable
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
